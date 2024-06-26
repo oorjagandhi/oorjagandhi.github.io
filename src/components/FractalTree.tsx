@@ -14,13 +14,13 @@ const Sketch = (p5: P5CanvasInstance) => {
     p5.clear();
     p5.translate(200, p5.height);
     angle = p5.map(p5.sin(p5.frameCount * 0.01), -1, 1, p5.PI / 2, p5.PI / 16); // vary the angle using sin()
-    branch(100);
+    branch(75); // Adjusted initial length of the branch to be between 100 and 50
   };
 
   const branch = (len: number) => {
     p5.line(0, 0, 0, -len);
     p5.translate(0, -len);
-    if (len > 4) {
+    if (len > 3) { // Adjusted stopping condition to be between 4 and 2
       p5.push();
       p5.rotate(angle);
       branch(len * 0.67);
