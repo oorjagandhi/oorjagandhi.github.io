@@ -1,13 +1,10 @@
 import React from 'react'
-import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import Intro from './components/Intro'
-import Skills from './components/Skills'
-import WorkExperience from './components/WorkExperience'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="bg-background">
       <Navbar />

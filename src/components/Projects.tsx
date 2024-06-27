@@ -1,9 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import Image from "./public/profilepic.jpg";
-import TriangleIcon from "./TriangleIcon";
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <Fade bottom duration={1000}>
       <div className="flex items-center justify-center mt-20">

@@ -1,9 +1,8 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import Image from "./public/profilepic.jpg";
 import TriangleIcon from "./TriangleIcon";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
     <Fade bottom duration={1000}>
       <div className="flex items-center justify-center mt-20">
@@ -25,7 +24,7 @@ const AboutMe = () => {
             </p>
 
             <ul className="grid grid-cols-2 gap-2 mb-4 text-[18px] text-lesswhite font-medium">
-              <Fade bottom duration={4000}>
+              <Fade bottom duration={3000}>
                 <li className="flex items-center">
                   <TriangleIcon />
                   <span className="ml-2">Java</span>

@@ -20,7 +20,7 @@ const Sketch = (p5: P5CanvasInstance) => {
   const branch = (len: number) => {
     p5.line(0, 0, 0, -len);
     p5.translate(0, -len);
-    if (len > 3) { // Adjusted stopping condition to be between 4 and 2
+    if (len > 3) { 
       p5.push();
       p5.rotate(angle);
       branch(len * 0.67);
