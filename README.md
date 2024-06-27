@@ -1,12 +1,5 @@
 # Oorja Gandhi
 
-## Dev set up information
-
-`npm i`
-
-`npm install daisyui`
-or
-`yarn install daisyui`
 
 ## Getting Started
 

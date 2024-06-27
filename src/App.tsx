@@ -5,16 +5,18 @@ import Intro from './components/Intro'
 import Skills from './components/Skills'
 import WorkExperience from './components/WorkExperience'
 import AboutMe from './components/AboutMe'
+import Projects from './components/Projects'
 
 const App = () => {
   return (
     <div className="bg-background">
       <Navbar />
+      <section id="intro"></section>
       <Intro />
-      <Skills />
-      <WorkExperience />
+      <section id="about"></section>
       <AboutMe />
-      <Contact />
+      <section id="projects"></section>
+      <Projects />
     </div>
   )
 }

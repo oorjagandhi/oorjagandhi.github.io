@@ -6,7 +6,7 @@ import MobileNavbar from './MobileNavbar';
 import { FiMail } from 'react-icons/fi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -20,25 +20,25 @@ const Navbar = () => {
         <nav className="bg-background text-whiteish flex justify-between items-center px-40 py-4 w-full">
           <ul className="flex items-center gap-6">
             <li>
-              <Link to="hero" smooth spy offset={-80} className="menu-item font-bold text-[15px]">
+              <Link to="intro" smooth spy offset={-80} className="menu-item font-bold text-[15px]">
                 Oorja Gandhi
               </Link>
             </li>
 
             <li>
-              <Link to="hero" smooth spy offset={-80} className="menu-item font-medium">
+              <Link to="intro" smooth spy offset={-80} className="menu-item font-medium">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="skills" smooth spy offset={-80} className="menu-item font-medium">
+              <Link to="about" smooth spy offset={-80} className="menu-item font-medium">
                 About
               </Link>
             </li>
 
             <li>
-              <Link to="experience" smooth spy offset={-80} className="menu-item font-medium">
+              <Link to="projects" smooth spy offset={-80} className="menu-item font-medium">
                 Projects
               </Link>
             </li>
@@ -47,10 +47,10 @@ const Navbar = () => {
             <a href="mailto:your-email@example.com" className="text-xl menu-item">
               <FiMail />
             </a>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-xl menu-item">
+            <a href="https://github.com/oorjagandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-item">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-xl menu-item">
+            <a href="https://www.linkedin.com/in/oorja-gandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-item">
               <FaLinkedin />
             </a>
           </div>

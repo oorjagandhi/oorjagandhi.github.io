@@ -16,10 +16,12 @@ export default {
         primary: "#7880B5",
         background: "#1B1030",
         cardbg: "#061840",
-        white: "#FBFBFB",
+        white: "#e4e1e9",
         lightpink: "#F0D1CE",
+        lesswhite: "#a299b3",
         whiteish: "#c9c4d3",
         lightpurple: "#7880B5",
+        darkpurple: "#403D65",
         overlayBg: 'rgba(0, 0, 0, 0.3)',
 
       },
