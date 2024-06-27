@@ -49,7 +49,7 @@ const AboutMe: React.FC = () => {
           </div>
           <div className="lg:w-1/3 flex justify-center lg:justify-end lg:mt-24 mt-10">
             <img
-              src="/profilepic.jpg"
+              src="/profilepic.JPG"
               alt="Profile"
               className="rounded-lg shadow-lg max-w-full lg:max-w-sm transition-transform duration-300 ease-in-out transform hover:scale-105"
               style={{ width: "280px", height: "280px" }}
