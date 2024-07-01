@@ -3,9 +3,16 @@ import Fade from "react-reveal/Fade";
 import TriangleIcon from "./TriangleIcon";
 
 const AboutMe: React.FC = () => {
+  const technologies = [
+    "Java",
+    "React.js",
+    "C",
+    "Typescript"
+  ];
+
   return (
     <Fade bottom duration={1000}>
-      <div className="flex items-center justify-center mt-20">
+      <div className="flex items-center justify-center mt-20 mb-100">
         <section className="flex flex-col lg:flex-row justify-center items-center bg-background w-[1000px] text-whiteish font-display">
           <div className="lg:w-[1000px] md:w-[650px] w-[500px] px-10">
             <div className="flex items-center mb-6">
@@ -24,24 +31,14 @@ const AboutMe: React.FC = () => {
             </p>
 
             <ul className="grid grid-cols-2 gap-2 mb-4 text-[18px] text-lesswhite font-medium">
-              <Fade bottom duration={3000}>
-                <li className="flex items-center">
-                  <TriangleIcon />
-                  <span className="ml-2">Java</span>
-                </li>
-                <li className="flex items-center">
-                  <TriangleIcon />
-                  <span className="ml-2">React.js</span>
-                </li>
-                <li className="flex items-center">
-                  <TriangleIcon />
-                  <span className="ml-2">C</span>
-                </li>
-                <li className="flex items-center">
-                  <TriangleIcon />
-                  <span className="ml-2">Typescript</span>
-                </li>
-              </Fade>
+              {technologies.map((tech, index) => (
+                <Fade bottom duration={1000} delay={index * 200} key={index}>
+                  <li className="flex items-center">
+                    <TriangleIcon />
+                    <span className="ml-2">{tech}</span>
+                  </li>
+                </Fade>
+              ))}
             </ul>
             <p className="lg:text-[18px] text-lesswhite font-medium">
               Outside of studying, I love trying out new cafes and spending time with my friends and family. I also like building legos.

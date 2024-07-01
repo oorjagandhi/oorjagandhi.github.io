@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Intro from './components/Intro'
 import AboutMe from './components/AboutMe'
 import Projects from './components/Projects'
+import Footer from './components/Footer'
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
       <AboutMe />
       <section id="projects"></section>
       <Projects />
+      <Footer />
     </div>
   )
 }

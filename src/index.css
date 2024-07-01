@@ -27,8 +27,8 @@
       transform: translateX(-100%);
     }
   
-    .menu-item:hover {
-      /* color: #7880B5; */
+    .menu-icon:hover {
+      color: #7880B5;
     }
 
     .menu-item:hover::after {

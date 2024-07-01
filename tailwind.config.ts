@@ -15,7 +15,7 @@ export default {
       colors: {
         primary: "#7880B5",
         background: "#1B1030",
-        cardbg: "#061840",
+        cardbg: "#291849",
         white: "#e4e1e9",
         lightpink: "#F0D1CE",
         lesswhite: "#a299b3",
@@ -23,6 +23,7 @@ export default {
         lightpurple: "#7880B5",
         darkpurple: "#403D65",
         overlayBg: 'rgba(0, 0, 0, 0.3)',
+        cardhover: "#372062",
 
       },
 

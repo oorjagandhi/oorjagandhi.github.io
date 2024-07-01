@@ -44,13 +44,13 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
           <div className="flex items-center gap-4">
-            <a href="mailto:your-email@example.com" className="text-xl menu-item">
+            <a href="mailto:your-email@example.com" className="text-xl menu-icon">
               <FiMail />
             </a>
-            <a href="https://github.com/oorjagandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-item">
+            <a href="https://github.com/oorjagandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-icon">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/oorja-gandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-item">
+            <a href="https://www.linkedin.com/in/oorja-gandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-icon">
               <FaLinkedin />
             </a>
           </div>
