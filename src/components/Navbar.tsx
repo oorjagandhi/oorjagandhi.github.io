@@ -17,51 +17,45 @@ const Navbar: React.FC = () => {
     <>
       {isMenuOpen && <MobileNavbar isOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       <div className="hidden md:flex w-screen fixed top-0 z-10">
-        <nav className="bg-background text-whiteish flex justify-between items-center px-40 py-4 w-full">
-          <ul className="flex items-center gap-6">
+        <nav className="bg-background text-whiteish flex justify-between items-center px-6 md:px-20 lg:px-40 py-2 md:py-4 w-full transition-all duration-300">
+          <ul className="flex items-center gap-4 md:gap-6">
             <li>
-              <Link to="intro" smooth spy offset={-80} className="menu-item font-bold text-[15px]">
+              <Link to="intro" smooth spy offset={-80} className="menu-item font-bold text-sm md:text-[15px]">
                 Oorja Gandhi
               </Link>
             </li>
 
             <li>
-              <Link to="intro" smooth spy offset={-80} className="menu-item font-medium">
+              <Link to="intro" smooth spy offset={-80} className="menu-item font-medium text-sm md:text-base">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="about" smooth spy offset={-80} className="menu-item font-medium">
+              <Link to="about" smooth spy offset={-80} className="menu-item font-medium text-sm md:text-base">
                 About
               </Link>
             </li>
 
             <li>
-              <Link to="projects" smooth spy offset={-80} className="menu-item font-medium">
+              <Link to="projects" smooth spy offset={-80} className="menu-item font-medium text-sm md:text-base">
                 Projects
               </Link>
             </li>
           </ul>
-          <div className="flex items-center gap-4">
-            <a href="mailto:your-email@example.com" className="text-xl menu-icon">
+          <div className="flex items-center gap-2 md:gap-4 text-sm md:text-xl">
+            <a href="mailto:your-email@example.com" className="menu-icon">
               <FiMail />
             </a>
-            <a href="https://github.com/oorjagandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-icon">
+            <a href="https://github.com/oorjagandhi" target="_blank" rel="noopener noreferrer" className="menu-icon">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/oorja-gandhi" target="_blank" rel="noopener noreferrer" className="text-xl menu-icon">
+            <a href="https://www.linkedin.com/in/oorja-gandhi" target="_blank" rel="noopener noreferrer" className="menu-icon">
               <FaLinkedin />
             </a>
           </div>
         </nav>
       </div>
-      <div className="p-3 fixed top-0 right-0 z-50">
-          <button onClick={toggleMenu} 
-          className="w-11 h-11 text-2xl text-sky-300 bg-blue-800/40 border border-sky-900/80 backdrop-blur-lg flex items-center justify-center rounded md:hidden z-50 ml-auto">
-            {isMenuOpen ? <RiCloseFill /> : <CgMenuMotion />}
-          </button>
-        </div>
     </>
   )
 }
