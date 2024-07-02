@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://oorjagandhi.github.io",
   "scripts": {
-    "start": "react-script start",
+    "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
