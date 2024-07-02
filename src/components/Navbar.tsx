@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
             </li>
           </ul>
           <div className="flex items-center gap-2 md:gap-4 text-sm md:text-xl">
-            <a href="mailto:your-email@example.com" className="menu-icon">
+            <a href="mailto:oorjagandhi@gmail.com" className="menu-icon">
               <FiMail />
             </a>
             <a href="https://github.com/oorjagandhi" target="_blank" rel="noopener noreferrer" className="menu-icon">
