@@ -2,6 +2,7 @@
 
 # Build output
 /build
+/dist
 
 # System files
 .DS_Store
