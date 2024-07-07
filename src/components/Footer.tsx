@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="flex flex-col justify-center items-center h-20 bg-background text-lesswhite font-display">
       <div>
         <p className="text-[15px] font-medium text-sm">
-          Built and designed with ♡ by Oorja Gandhi
+          Built and designed by Oorja Gandhi
         </p>
       </div>
       <div>
