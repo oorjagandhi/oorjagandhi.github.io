@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
 
   return (
     <Fade bottom duration={1000}>
-      <div className="flex items-center justify-center mt-20 mb-100">
+      <div className="flex items-center justify-center mt-40 mb-100">
         <section className="flex flex-col lg:flex-row justify-center items-center bg-background w-[1000px] text-whiteish font-display">
           <div className="lg:w-[1000px] md:w-[650px] w-[500px] px-10">
             <div className="flex items-center mb-6">

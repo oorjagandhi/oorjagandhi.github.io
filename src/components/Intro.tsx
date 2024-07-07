@@ -12,7 +12,7 @@ const Intro: React.FC = () => {
           hi, <span className="text-lightpurple">oorja</span> here.
         </h1>
       </div>
-      <Fade bottom duration={3000}>
+      <Fade bottom duration={2000} distance="100px">
         <p className="sm:text-[30px] lg:text-[30px] text-lesswhit font-medium mt-2">
           I build stuff sometimes.
         </p>
@@ -24,7 +24,7 @@ const Intro: React.FC = () => {
             to developing my potential and making a meaningful impact! ☺
           </p>
         </div>
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center mt-5">
           <a href="mailto:oorjagandhi@gmail.com">
             <button className="relative flex items-center justify-center h-[50px] w-40 overflow-hidden bg-background text-lightpurple font-bold py-4 px-6 border border-lightpurple rounded transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-lightpurple before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 hover:text-white">
               <FiMail className="relative z-10 mr-2" />

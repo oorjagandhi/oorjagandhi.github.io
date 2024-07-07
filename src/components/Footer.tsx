@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col justify-center items-center h-20 bg-background text-lesswhite font-display">
+    <footer className="flex flex-col justify-center items-center h-20 mt-20 bg-background text-lesswhite font-display">
       <div>
         <p className="text-[15px] font-medium text-sm">
-          Built and designed with ♡ by Oorja Gandhi
+          Built and designed by Oorja Gandhi
         </p>
       </div>
       <div>

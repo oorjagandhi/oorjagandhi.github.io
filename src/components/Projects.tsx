@@ -8,7 +8,7 @@ const Projects: React.FC = () => {
     {
       title: "SESA Website",
       description:
-        "Contributed to the redevelopment of the SESA (UoA's Software Engineering Student Association) website. This project redeveloped the current website to improve user experience and provide a more modern and responsive design.",
+        "Contributed to the redevelopment of the SESA (UoA's Software Engineering Student Association) website. This project redesigned the current website to improve user experience and provide a more modern and responsive design.",
       technologies: [
         "Node.js",
         "React.js",
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
 
   return (
     <Fade bottom duration={1000}>
-      <div className="flex items-center justify-center mt-20">
+      <div className="flex items-center justify-center mt-40">
         <section className="flex flex-col justify-center items-center bg-background lg:w-[1000px] md:w-[650px] w-[500px] text-whiteish font-display mb-20">
           <div className="px-10 w-full">
             <div className="flex items-center mb-6">
@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="w-full grid md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
               {projectData.map((project, index) => (
-                <Fade bottom duration={1000} delay={index * 300} key={index}>
+                <Fade bottom duration={1000} distance="100px" delay={index * 300} key={index}>
                   <div className="bg-cardbg p-6 rounded-lg shadow-lg md:w-[280px] lg:w-[300px] lg:h-[350px] flex flex-col justify-between hover:bg-cardhover transition-all duration-300 ease-in-out">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center">
