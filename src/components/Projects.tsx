@@ -81,7 +81,7 @@ const Projects: React.FC = () => {
           <div className="px-10 w-full">
             <div className="flex items-center mb-6">
               <h2 className="text-lightpurple text-3xl sm:text-4xl font-bold">
-                / my projects
+                / projects
               </h2>
               <div className="h-1 bg-darkpurple ml-4 w-24 md:w-80 lg:w-80 mt-2"></div>
             </div>
