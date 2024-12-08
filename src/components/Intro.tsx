@@ -20,9 +20,8 @@ const Intro: React.FC = () => {
         <div className="max-w-prose text-center px-4 mt-3">
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-lesswhite font-light">
             I'm an aspiring software engineer based in Auckland, New Zealand.
-            Enthusiastic about technology and problem solving, I'm excited to join a
-            team where I can contribute to real-world projects. I look forward
-            to developing my potential and making a meaningful impact! ☺
+            Enthusiastic about everything technology, I'm eager to 
+            pursue opportunities that help me grow my knowledge and skills! ☺
           </p>
         </div>
         <div className="flex justify-center items-center mt-5">

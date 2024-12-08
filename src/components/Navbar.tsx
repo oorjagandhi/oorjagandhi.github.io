@@ -34,6 +34,11 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
+              <Link to="experience" smooth spy offset={-80} className="menu-item font-medium text-sm md:text-base">
+                Experience
+              </Link>
+            </li>
+            <li>
               <Link to="projects" smooth spy offset={-80} className="menu-item font-medium text-sm md:text-base">
                 Projects
               </Link>

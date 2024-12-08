@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
                 className="text-lightpurple font-bold hover:underline"
               >
                 Visa
-              </a>.
+              </a>,
               and in my penultimate year of studying {' '}
               <span className="font-bold">Software Engineering</span> at the {' '}
               <a 
@@ -53,15 +53,15 @@ const AboutMe: React.FC = () => {
               ))}
             </ul>
             <p className="text-sm sm:text-base md:text-base lg:text-lg text-lesswhite font-light">
-              Additionally, I'm the <span className="font-bold">President</span> of{' '}
+              I'm also the <span className="font-bold">President</span> of{' '}
               <a 
                 href="https://sesa.org.nz" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-lightpurple font-bold hover:underline"
               >
-                SESA - the Software Engineering Students Association
-              </a>. I lead an executive team of 18 to organise social and career-focused events for our 550+ members, fostering connections with industry professionals as well as each other.
+                SESA (Software Engineering Students Association)
+              </a> - leading a team of 18 to organise events connecting 550+ members with industry professionals and peers.
             </p>
 
           </div>
