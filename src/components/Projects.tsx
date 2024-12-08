@@ -1,15 +1,39 @@
 import React from "react";
+import { Carousel } from "react-bootstrap";
 import Fade from "react-reveal/Fade";
 import { FaFolderClosed } from "react-icons/fa6";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
+import SE206Image from "../assets/SE206.png";
+import RestoreImage from "../assets/restore.png";
+
 
 const Projects: React.FC = () => {
+  const spotlightProjects = [
+    {
+      title: "Lost Time at Sea",
+      description:
+        "A mystery game powered by the OpenAI API. Interrogate suspects, gather clues, and solve the case before time runs out!",
+      technologies: ["Java, JavaFX, CSS, OpenAI API"],
+      github: "https://github.com/oorjagandhi/Lost-Time-at-Sea",
+      image: SE206Image,
+    },
+    {
+      title: "Restore",
+      description:
+      "A social network for environmental cleanups, featuring a map-based interface that lets users create, join, and track events while measuring their environmental impact. Awarded 4th place at the 2024 DEVS Hackathon.",
+      technologies: ["React, Typescript, MongoDB, TailwindCSS, Google Maps API"],
+      github: "https://github.com/oorjagandhi/Restore",
+      image: RestoreImage
+    },
+  ];
+  
   const projectData = [
     {
       title: "SESA Website",
       description:
         "Contributed to the redevelopment of the SESA (UoA's Software Engineering Student Association) website. This project redesigned the current website to improve user experience and provide a more modern and responsive design.",
-      technologies: ["Node.js", "React.js", "Typescript", "HTML", "TailwindCSS"],
+      technologies: ["React", "Next.js", "Typescript", "TailwindCSS"],
       github: "https://github.com/sesauoa/sesa.org.nz",
       link: "https://sesa.org.nz",
     },
@@ -61,9 +85,66 @@ const Projects: React.FC = () => {
               </h2>
               <div className="h-1 bg-darkpurple ml-4 w-24 md:w-80 lg:w-80 mt-2"></div>
             </div>
+            <Carousel>
+              {spotlightProjects.map((project, index) => (
+                <Carousel.Item key={index}>
+                  <div className="relative">
+                    {/* Dark overlay */}
+                    <img
+                      className="d-block w-100"
+                      src={project.image}
+                      alt={project.title}
+                      style={{
+                        filter: "brightness(35%)",
+                        borderRadius: "20px",
+                        overflow: "hidden",
+                      }}
+                    />
+                    <Carousel.Caption>
+                      <div className="relative">
+                        <h3 className="text-4xl font-bold text-whiteish">
+                          {project.title}
+                        </h3>
+                        <p className="text-lg text-whiteish mt-3">
+                          {project.description}
+                        </p>
+                        <ul className="flex flex-wrap mt-3 gap-2 justify-center">
+                          {project.technologies.map((tech, idx) => (
+                            <li
+                              key={idx}
+                              className="text-lightpurple text-sm font-medium"
+                            >
+                              {tech}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="flex justify-center mt-4">
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-lightpurple"
+                          >
+                            <FaGithub size={32} />
+                          </a>
+                        </div>
+                      </div>
+                    </Carousel.Caption>
+                  </div>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </div>
+          <div className="px-10 w-full mt-10">
             <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
               {projectData.map((project, index) => (
-                <Fade bottom duration={1000} distance="100px" delay={index * 300} key={index}>
+                <Fade
+                  bottom
+                  duration={1000}
+                  distance="100px"
+                  delay={index * 300}
+                  key={index}
+                >
                   <div className="bg-cardbg p-6 rounded-lg shadow-lg md:w-[280px] lg:w-[300px] lg:h-[350px] flex flex-col justify-between hover:bg-cardhover transition-all duration-300 ease-in-out">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center">
@@ -80,18 +161,6 @@ const Projects: React.FC = () => {
                         >
                           <FaGithub className="text-lesswhite" size={18} />
                         </a>
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaExternalLinkAlt
-                              className="text-lesswhite"
-                              size={18}
-                            />
-                          </a>
-                        )}
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-whiteish">
