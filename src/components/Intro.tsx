@@ -8,9 +8,10 @@ const Intro: React.FC = () => {
     <section className="flex flex-col justify-center items-center min-h-screen px-4">
       <FractalTree />
       <div className="text-center mt-5">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-typing overflow-hidden whitespace-nowrap pr-5 text-whiteish font-bold leading-tight border-r-4 border-whiteish cursor-default">
-          hi, <span className="text-lightpurple">oorja</span> here.
-        </h1>
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-typing overflow-hidden whitespace-nowrap pr-5 text-whiteish font-bold leading-[1.2] sm:leading-[1.2] md:leading-[1.2] lg:leading-[1.2] border-r-4 border-whiteish cursor-default">
+        hi, <span className="text-lightpurple">oorja</span> here.
+      </h1>
+
       </div>
       <Fade bottom duration={2000} distance="100px">
         <p className="text-lg sm:text-2xl lg:text-3xl text-lesswhite font-medium mt-2">
@@ -19,9 +20,9 @@ const Intro: React.FC = () => {
         <div className="max-w-prose text-center px-4 mt-3">
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-lesswhite font-light">
             I'm an aspiring software engineer based in Auckland, New Zealand.
-            Enthusiastic about technology and innovation, I'm excited to join a
+            Enthusiastic about technology and problem solving, I'm excited to join a
             team where I can contribute to real-world projects. I look forward
-            to developing my potential and making a meaningful impact! :) 
+            to developing my potential and making a meaningful impact! ☺
           </p>
         </div>
         <div className="flex justify-center items-center mt-5">
