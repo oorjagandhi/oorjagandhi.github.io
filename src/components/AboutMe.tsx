@@ -17,7 +17,7 @@ const AboutMe: React.FC = () => {
               <div className="h-1 bg-darkpurple ml-4 w-24 md:w-80 lg:w-80 mt-2"></div>
             </div>
             <p className="text-sm sm:text-base md:text-base lg:text-lg text-lesswhite font-light">
-              I am currently in my second year studying towards a Bachelor of
+              I am currently in my penultimate year studying towards a Bachelor of
               Engineering, specialising in <b>Software Engineering</b> at the
               University of Auckland.
             </p>
