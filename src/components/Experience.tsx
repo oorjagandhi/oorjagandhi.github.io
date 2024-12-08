@@ -14,16 +14,6 @@ const experienceItems = [
       "Gained hands-on experience with cutting-edge technologies and methodologies in a fast-paced, agile environment.",
     ],
   },
-  {
-    company: "blehkajdhn kajsdhk ajsdnk",
-    jobTitle: "Software Engineer Intern @",
-    duration: "NOV 2024 - PRESENT",
-    desc: [
-      "Contributed to the development of new features for Visa Spend Clarity for Enterprise, enhancing user experience for enterprise customers.",
-      "Collaborated with cross-functional teams to design, implement, and test scalable solutions using modern software engineering practices.",
-      "Gained hands-on experience with cutting-edge technologies and methodologies in a fast-paced, agile environment.",
-    ],
-  },
 ];
 
 const Experience: React.FC = () => {
@@ -70,11 +60,13 @@ const Experience: React.FC = () => {
                     onClick={() =>
                       setActiveIndex(activeIndex === index ? null : index)
                     }
-                    className={`accordion-button w-full flex justify-between items-center px-4 py-2 bg-darkpurple text-white font-bold rounded-md`}
+                    className={`accordion-button w-full flex justify-between items-center px-4 py-2 rounded-md ${
+                      activeIndex === index
+                        ? "bg-cardbg text-lightpurple"
+                        : "bg-darkpurple text-white"
+                    } font-bold`}
                   >
-                    <span className={`${activeIndex === index ? "text-lightpurple bg-activepurple": "text-white"}`}>
-                      {item.company}
-                    </span>
+                    <span>{item.company}</span>
                     {/* Plus and Minus Icons */}
                     <span className="absolute right-4">
                       {activeIndex === index ? (
@@ -85,17 +77,16 @@ const Experience: React.FC = () => {
                     </span>
                   </button>
 
-
                   {/* Accordion Content */}
                   {activeIndex === index && (
-                    <div className="accordion-content px-4 py-2 bg-background rounded-md mt-2">
+                    <div
+                      className={`accordion-content px-4 py-2 rounded-md mt-2 bg-cardbg`}
+                    >
                       <h3 className="text-2xl font-semibold mb-2">
                         {item.jobTitle}
                         <span className="text-lightpurple"> {item.company}</span>
                       </h3>
-                      <p className="text-sm mb-4 text-gray-500">
-                        {item.duration}
-                      </p>
+                      <p className="text-sm mb-4 text-gray-500">{item.duration}</p>
                       <ul className="space-y-2">
                         {item.desc.map((descItem, descIndex) => (
                           <Fade
@@ -131,11 +122,7 @@ const Experience: React.FC = () => {
                   <div
                     key={index}
                     onClick={() => setActiveIndex(index)}
-                    className={`relative cursor-pointer pl-4 text-lg font-semibold ${
-                      index === activeIndex
-                        ? "text-lightpurple"
-                        : "text-gray-400"
-                    }`}
+                    className={`relative cursor-pointer pl-4 text-lg font-semibold text-gray-400`}
                   >
                     {item.company}
                   </div>
