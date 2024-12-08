@@ -85,19 +85,18 @@ const Projects: React.FC = () => {
               </h2>
               <div className="h-1 bg-darkpurple ml-4 w-24 md:w-80 lg:w-80 mt-2"></div>
             </div>
+            <div className="custom-carousel">
             <Carousel>
               {spotlightProjects.map((project, index) => (
                 <Carousel.Item key={index}>
                   <div className="relative">
-                    {/* Dark overlay */}
                     <img
                       className="d-block w-100"
                       src={project.image}
                       alt={project.title}
                       style={{
-                        filter: "brightness(35%)",
-                        borderRadius: "20px",
-                        overflow: "hidden",
+                        filter: "brightness(40%)",
+                        borderRadius: "20px", // Curved edges
                       }}
                     />
                     <Carousel.Caption>
@@ -105,15 +104,12 @@ const Projects: React.FC = () => {
                         <h3 className="text-4xl font-bold text-whiteish">
                           {project.title}
                         </h3>
-                        <p className="text-lg text-whiteish mt-3">
+                        <p className="hidden md:block md:text-sm lg:text-lg text-whiteish mt-3">
                           {project.description}
                         </p>
                         <ul className="flex flex-wrap mt-3 gap-2 justify-center">
                           {project.technologies.map((tech, idx) => (
-                            <li
-                              key={idx}
-                              className="text-lightpurple text-sm font-medium"
-                            >
+                            <li key={idx} className="text-lightpurple text-sm font-medium">
                               {tech}
                             </li>
                           ))}
@@ -134,8 +130,10 @@ const Projects: React.FC = () => {
                 </Carousel.Item>
               ))}
             </Carousel>
+            </div>
+
           </div>
-          <div className="px-10 w-full mt-10">
+          <div className="px-10 w-full mt-20">
             <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
               {projectData.map((project, index) => (
                 <Fade

@@ -46,6 +46,34 @@
       @apply h-9 md:h-11 bg-primary text-white text-sm px-6 rounded border border-primary hover:bg-transparent hover:text-primary;
     }
 
+    .custom-carousel .carousel-indicators {
+      position: absolute;
+      bottom: -50px; /* Adjust the spacing below the image */
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Add spacing between indicators */
+      width: auto; /* Ensure width doesn't constrain the indicators */
+      padding: 0;
+      list-style: none; /* Remove any default styling */
+      z-index: 1; /* Ensure indicators are on top of other content */
+    }
+    
+    
+    .custom-carousel .carousel-indicators li {
+      background-color: #ccc; /* Default dot color */
+      width: 12px;
+      height: 12px;
+      border-radius: 50%; /* Round dots */
+      cursor: pointer;
+      border: none; /* Remove any default border */
+    }
+    
+    .custom-carousel .carousel-indicators .active {
+      background-color: #6b46c1; /* Active dot color */
+    }
+    
+     
+
   }
   
 
