@@ -65,12 +65,12 @@ const AboutMe: React.FC = () => {
             </p>
 
           </div>
-          <div className="lg:w-1/3 flex justify-center lg:justify-end lg:mt-20 m-5">
+          <div className="lg:w-1/3 flex justify-center lg:justify-end lg:mt-12 mt-10 pl-4">
             <img
               src="/profilepic.JPG"
               alt="Profile"
               className="rounded-lg shadow-lg max-w-full lg:max-w-sm transition-transform duration-300 ease-in-out transform hover:scale-105"
-              style={{ width: "100%", maxWidth: "280px", height: "auto" }}
+              style={{ width: "280px", height: "280px" }}
             />
           </div>
         </section>
