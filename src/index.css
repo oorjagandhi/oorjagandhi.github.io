@@ -13,6 +13,7 @@
   body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     overflow-x:hidden;
+    background-color: #1B1030;
   }
 }
 
@@ -69,13 +70,19 @@
     }
     
     .custom-carousel .carousel-indicators .active {
-      background-color: #6b46c1; /* Active dot color */
+      background-color: #7880B5; /* Active dot color */
     }
 
+    .indicator {
+      position: absolute;
+      right: -8px; /* Adjust to the right of the company name */
+      width: 4px;
+      height: 32px; /* Matches the height of the sidebar item */
+      background-color: #7880B5; /* Your light purple color */
+      transition: top 0.3s ease-in-out; /* Smooth vertical transition */
+      transform: translateY(22px); /* Start below the first item */
+    }
     
-    
-     
-
   }
   
 

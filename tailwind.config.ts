@@ -24,6 +24,7 @@ export default {
         darkpurple: "#403D65",
         overlayBg: 'rgba(0, 0, 0, 0.3)',
         cardhover: "#372062",
+        brightpurple: "#8c98e9",
 
       },
 

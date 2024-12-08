@@ -109,7 +109,7 @@ const Projects: React.FC = () => {
                         </p>
                         <ul className="flex flex-wrap mt-3 gap-2 justify-center">
                           {project.technologies.map((tech, idx) => (
-                            <li key={idx} className="text-lightpurple text-sm font-medium">
+                            <li key={idx} className="text-brightpurple text-sm font-medium">
                               {tech}
                             </li>
                           ))}
@@ -121,7 +121,7 @@ const Projects: React.FC = () => {
                             rel="noopener noreferrer"
                             className="text-whiteish hover:text-lightpurple"
                           >
-                            <FaGithub className="w-8 h-8" />
+                            <FaGithub className="mt-2 w-6 h-6" />
                           </a>
                         </div>
                       </div>

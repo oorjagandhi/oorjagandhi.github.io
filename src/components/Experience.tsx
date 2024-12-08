@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Fade from "react-reveal/Fade";
 import TriangleIcon from "./TriangleIcon";
 
@@ -13,20 +13,18 @@ const experienceItems = [
       "Gained hands-on experience with cutting-edge technologies and methodologies in a fast-paced, agile environment.",
     ],
   },
-  {
-    company: "Company 2",
-    jobTitle: "Software Engineer @",
-    duration: "FEB 2024 - NOV 2024",
-    desc: [
-      "Developed innovative solutions to improve performance and reliability.",
-      "Led a team in delivering scalable backend services with high uptime.",
-      "Enhanced security protocols to ensure compliance with industry standards.",
-    ],
-  },
 ];
 
 const Experience: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const indicatorRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (indicatorRef.current) {
+      const height = 48; // Adjust this value to match the height of each company item
+      indicatorRef.current.style.top = `${activeIndex * height}px`;
+    }
+  }, [activeIndex]);
 
   return (
     <Fade bottom duration={1000}>
@@ -43,7 +41,13 @@ const Experience: React.FC = () => {
           {/* Content */}
           <div className="flex flex-col lg:flex-row lg:space-x-10 w-full">
             {/* Sidebar */}
-            <div className="flex flex-col lg:w-1/4 space-y-6 border-r border-gray-700 pr-6">
+            <div className="relative flex flex-col lg:w-1/4 space-y-6 pr-6">
+              {/* Indicator */}
+              <div
+                ref={indicatorRef}
+                className="indicator"
+                style={{ top: 0 }}
+              ></div>
               {experienceItems.map((item, index) => (
                 <div
                   key={index}
@@ -53,12 +57,6 @@ const Experience: React.FC = () => {
                   }`}
                 >
                   {item.company}
-                  {/* Indicator bar */}
-                  <div
-                    className={`absolute right-[-0.5rem] top-0 h-full w-1 bg-lightpurple transition-all ${
-                      index === activeIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                  ></div>
                 </div>
               ))}
             </div>
