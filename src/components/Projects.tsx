@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SE206Image from "../assets/SE206.png";
 import RestoreImage from "../assets/restore.png";
 
-
 const Projects: React.FC = () => {
   const spotlightProjects = [
     {
@@ -21,13 +20,13 @@ const Projects: React.FC = () => {
     {
       title: "Restore",
       description:
-      "A social network for environmental cleanups, featuring a map-based interface that lets users create, join, and track events while measuring their environmental impact. Awarded 4th place at the 2024 DEVS Hackathon.",
+        "A social network for environmental cleanups, featuring a map-based interface that lets users create, join, and track events while measuring their environmental impact. Awarded 4th place at the 2024 DEVS Hackathon.",
       technologies: ["React, Typescript, MongoDB, TailwindCSS, Google Maps API"],
       github: "https://github.com/oorjagandhi/Restore",
-      image: RestoreImage
+      image: RestoreImage,
     },
   ];
-  
+
   const projectData = [
     {
       title: "SESA Website",
@@ -78,63 +77,70 @@ const Projects: React.FC = () => {
     <Fade bottom duration={1000}>
       <div className="flex items-center justify-center mt-20">
         <section className="flex flex-col justify-center items-center bg-background lg:w-[1000px] md:w-[650px] w-[500px] text-whiteish font-display mb-20">
-          <div className="px-10 w-full">
+          <div className="px-5 w-full">
             <div className="flex items-center mb-6">
               <h2 className="text-lightpurple text-3xl sm:text-4xl font-bold">
                 / projects
               </h2>
               <div className="h-1 bg-darkpurple ml-4 w-24 md:w-80 lg:w-80 mt-2"></div>
             </div>
-            <div className="custom-carousel">
-            <Carousel>
-              {spotlightProjects.map((project, index) => (
-                <Carousel.Item key={index}>
-                  <div className="relative">
-                    <img
-                      className="d-block w-100"
-                      src={project.image}
-                      alt={project.title}
-                      style={{
-                        filter: "brightness(40%)",
-                        borderRadius: "20px", // Curved edges
-                      }}
-                    />
-                    <Carousel.Caption>
-                      <div className="relative">
-                        <h3 className="text-4xl font-bold text-whiteish">
-                          {project.title}
-                        </h3>
-                        <p className="hidden md:block md:text-sm lg:text-lg text-whiteish mt-3">
-                          {project.description}
-                        </p>
-                        <ul className="flex flex-wrap mt-3 gap-2 justify-center">
-                          {project.technologies.map((tech, idx) => (
-                            <li key={idx} className="text-brightpurple text-sm font-medium">
-                              {tech}
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="flex justify-center mt-2 md:mt-4">
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-whiteish hover:text-lightpurple"
-                          >
-                            <FaGithub className="mt-2 w-6 h-6" />
-                          </a>
+            <div
+              className="custom-carousel"
+              style={{
+                padding: "0", // Default padding (fallback for non-Tailwind environments)
+              }}
+            >
+              <Carousel className="pb-2 sm:pt-1 sm:pb-1 md:pt-6 lg:pt-10">
+                {spotlightProjects.map((project, index) => (
+                  <Carousel.Item key={index}>
+                    <div className="relative">
+                      <img
+                        className="d-block w-100"
+                        src={project.image}
+                        alt={project.title}
+                        style={{
+                          filter: "brightness(40%)",
+                          borderRadius: "20px", // Curved edges
+                        }}
+                      />
+                      <Carousel.Caption>
+                        <div className="relative">
+                          <h3 className="text-2xl sm:text-4xl font-bold text-whiteish">
+                            {project.title}
+                          </h3>
+                          <p className="hidden md:block md:text-sm lg:text-lg text-whiteish mt-3">
+                            {project.description}
+                          </p>
+                          <ul className="flex flex-wrap mt-2 gap-2 justify-center">
+                            {project.technologies.map((tech, idx) => (
+                              <li
+                                key={idx}
+                                className="text-brightpurple text-sm font-medium"
+                              >
+                                {tech}
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="flex justify-center mt-0.5 md:mt-4">
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-whiteish hover:text-lightpurple"
+                            >
+                              <FaGithub className="mt-2 w-4 h-4" />
+                            </a>
+                          </div>
                         </div>
-                      </div>
-                    </Carousel.Caption>
-                  </div>
-                </Carousel.Item>
-              ))}
-            </Carousel>
+                      </Carousel.Caption>
+                    </div>
+                  </Carousel.Item>
+                ))}
+              </Carousel>
             </div>
-
           </div>
-          <div className="px-10 w-full mt-20">
-            <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+          <div className="px-5 w-full mt-14">
+            <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center pt-4">
               {projectData.map((project, index) => (
                 <Fade
                   bottom
@@ -143,7 +149,7 @@ const Projects: React.FC = () => {
                   delay={index * 300}
                   key={index}
                 >
-                  <div className="bg-cardbg p-6 rounded-lg shadow-lg md:w-[280px] lg:w-[300px] lg:h-[350px] flex flex-col justify-between hover:bg-cardhover transition-all duration-300 ease-in-out">
+                  <div className="bg-cardbg p-4 rounded-lg shadow-lg md:w-[280px] lg:w-[300px] lg:h-[350px] flex flex-col justify-between hover:bg-cardhover transition-all duration-300 ease-in-out">
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex items-center">
                         <FaFolderClosed

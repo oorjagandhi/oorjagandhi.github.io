@@ -61,7 +61,7 @@ const AboutMe: React.FC = () => {
                 className="text-lightpurple font-bold hover:underline"
               >
                 SESA (Software Engineering Students Association)
-              </a> - leading a team of 18 to organise events connecting 550+ members with industry professionals and peers.
+              </a> - leading a team of 18 to organise events connecting over 500 members with industry professionals and peers.
             </p>
 
           </div>

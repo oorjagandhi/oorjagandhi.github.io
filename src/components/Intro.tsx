@@ -21,7 +21,7 @@ const Intro: React.FC = () => {
           <p className="text-xs sm:text-sm md:text-base lg:text-lg text-lesswhite font-light">
             I'm an aspiring software engineer based in Auckland, New Zealand.
             Enthusiastic about everything technology, I'm eager to 
-            pursue opportunities that help me grow my knowledge and skills! ☺
+            pursue opportunities that help me grow my knowledge and skills! 
           </p>
         </div>
         <div className="flex justify-center items-center mt-5">
