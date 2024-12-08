@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 import TriangleIcon from "./TriangleIcon";
 
 const AboutMe: React.FC = () => {
-  const technologies = ["Java", "React.js", "C", "Typescript"];
+  const technologies = ["Java", "React.js", "C#", "Typescript"];
 
   return (
     <Fade bottom duration={1000}>
