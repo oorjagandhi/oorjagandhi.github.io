@@ -70,7 +70,7 @@ const AboutMe: React.FC = () => {
               src="/profilepic.JPG"
               alt="Profile"
               className="rounded-lg shadow-lg max-w-full lg:max-w-sm transition-transform duration-300 ease-in-out transform hover:scale-105"
-              style={{ width: "280px", height: "280px" }}
+              style={{ width: "100%", maxWidth: "280px", height: "auto" }}
             />
           </div>
         </section>
