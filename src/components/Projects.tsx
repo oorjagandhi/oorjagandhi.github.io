@@ -114,14 +114,14 @@ const Projects: React.FC = () => {
                             </li>
                           ))}
                         </ul>
-                        <div className="flex justify-center mt-4">
+                        <div className="flex justify-center mt-2 md:mt-4">
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-lightpurple"
+                            className="text-whiteish hover:text-lightpurple"
                           >
-                            <FaGithub size={32} />
+                            <FaGithub className="w-8 h-8" />
                           </a>
                         </div>
                       </div>
